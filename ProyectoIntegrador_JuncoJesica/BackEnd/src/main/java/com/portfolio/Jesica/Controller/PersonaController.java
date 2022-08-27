@@ -26,7 +26,7 @@ public class PersonaController {
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
-        return "La perosna fue creada correctamente";
+        return "La persona fue creada correctamente";
     }
     
     @DeleteMapping("/personas/borrar/{id}")
@@ -35,7 +35,7 @@ public class PersonaController {
         return "La persona fue eliminada correctamente";
     }
     //URL:Puerto/personas/editar/id/nombre & apellido & img
-    @PutMapping("/personas/editar/(id)")
+    @PutMapping("/personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
                                @RequestParam("nombre") String nuevoNombre,
                                @RequestParam("apellido") String nuevoApellido,

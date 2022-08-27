@@ -30,17 +30,7 @@ public class Persona {
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String img;
 
-    public void setImg(String nuevoImg) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
-    public void setApellido(String nuevoApellido) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setNombre(String nuevoNombre) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
    
     
 }
