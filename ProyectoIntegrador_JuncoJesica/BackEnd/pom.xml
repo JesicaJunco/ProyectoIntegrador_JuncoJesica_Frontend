@@ -15,6 +15,7 @@
 	<description>Portfolio de Jesica</description>
 	<properties>
 		<java.version>1.8</java.version>
+                <start-class>com.portfolio.Jesica.JesicaApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
