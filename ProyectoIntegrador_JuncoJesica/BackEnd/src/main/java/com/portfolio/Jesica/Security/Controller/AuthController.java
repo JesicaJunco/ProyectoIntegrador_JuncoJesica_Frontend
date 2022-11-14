@@ -34,8 +34,8 @@ import com.portfolio.Jesica.Security.Dto.NuevoUsuario;
 
 @RestController
 @RequestMapping("/auth")
-//@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "https://Jesicafrontend.web.app")
+@CrossOrigin()
+//@CrossOrigin(origins = "https://Jesicafrontend.web.app")
 public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
