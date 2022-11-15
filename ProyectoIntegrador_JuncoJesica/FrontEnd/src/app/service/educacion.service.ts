@@ -9,7 +9,7 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-URL = 'https://backendjesica.herokuapp.com/educacion/';
+URL = 'https://backendjesicaj.herokuapp.com/educacion/';
   constructor(private httpClient : HttpClient) { }
 
   public lista(): Observable<Educacion[]>{
