@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\proyecto-integrador-junco-jesica",
+    "public": "dist/proyecto-integrador-junco-jesica",
     "ignore": [
       "firebase.json",
       "**/.*",
