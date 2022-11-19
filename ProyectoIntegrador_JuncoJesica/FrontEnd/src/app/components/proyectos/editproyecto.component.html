@@ -1,4 +1,4 @@
-<div class="container" *ngIf="expLab">
+<div class="container">
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -14,12 +14,7 @@
                     <label for="img">Ingrese la url de la imagen</label> 
                     <input type="file" class="form-control" id="img" name="img" (click)="imagenCargada = true" (click)="this.imagePService.url = ''" (change)= "uploadImage($event)" accept=".jpg, .jpeg, .png" required>
                 </div>
-                <div class="imagen">
-                    <ngx-spinner [fullScreen]="false" size="medium" type="pacman" color="#edb948" class="spinner">
-                    </ngx-spinner>
-                    <img [src]="proyecto.img" width="200px" *ngIf="!imagenCargada">
-                    <img [src]="imagePService.url" width="200px" *ngIf="imagenCargada">
-                </div>   
+                 
                 <br>
                 <button class="btn btn-primary">
                     Editar proyecto
