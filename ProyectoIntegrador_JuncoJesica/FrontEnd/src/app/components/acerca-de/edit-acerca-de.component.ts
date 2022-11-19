@@ -3,6 +3,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { PersonaService } from 'src/app/service/persona.service';
 import { TokenService } from 'src/app/service/token.service';
 import { persona } from 'src/app/model/persona.model';
+import { ImageService } from 'src/app/service/image.service';
 
 @Component({
   selector: 'app-edit-acerca-de',
@@ -16,7 +17,8 @@ export class EditAcercaDeComponent implements OnInit {
     private activatedRouter: ActivatedRoute,
     private personaService: PersonaService,
     private router: Router,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    public imageService: ImageService
   ) { }
   
  
@@ -37,6 +39,7 @@ ngOnInit(): void {
 
 onUpdate(): void {
   const id = this.activatedRouter.snapshot.params['id'];
+  this.persona.img = this.imageService.url
   this.personaService.update(id, this.persona).subscribe(
     data => {
       this.router.navigate(['']);
@@ -49,7 +52,9 @@ onUpdate(): void {
 }
 
 uploadImage($event:any){
-  
+  const id = this.activatedRouter.snapshot.params['id'];
+  const name = "perfil_" + id;
+  this.imageService.uploadImage($event, name)
 }
 
 }

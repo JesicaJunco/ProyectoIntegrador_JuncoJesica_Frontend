@@ -19,7 +19,9 @@
                     <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event) 
                     "accept =".jpg, .jpeg, .png">
                 </div>
-                 
+                <div class="imagen">
+                    <img [src]="imageService.url" alt="" width="200px">
+                </div> 
                 <br>
                 <button class="btn btn-primary">
                     Editar persona
