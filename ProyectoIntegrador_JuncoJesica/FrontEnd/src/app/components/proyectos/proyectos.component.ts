@@ -10,8 +10,10 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ProyectosComponent implements OnInit {
   proyecto: Proyecto[] = [];
+
   constructor(public proyectoService: ProyectoService, private tokenService: TokenService) { }
   isLogged = false;
+  
   ngOnInit(): void {
     this.cargarProyectos();
     if(this.tokenService.getToken()){

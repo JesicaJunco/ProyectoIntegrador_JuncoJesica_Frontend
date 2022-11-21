@@ -11,7 +11,7 @@ export class ImageService {
   constructor(private storage: Storage) { }
 
   public uploadImage($event: any, name: string){
-    
+    /*subir imagen*/
     const file =$event.target.files[0]
     const imgRef = ref(this.storage, `imagen/`+ name)
     uploadBytes(imgRef, file)
@@ -19,7 +19,7 @@ export class ImageService {
       this.getImages()})
     .catch(error => console.log(error))
   }
-
+  /*traer imagen*/
   getImages(){
     const imagesRef = ref(this.storage, 'imagen')
     list(imagesRef)

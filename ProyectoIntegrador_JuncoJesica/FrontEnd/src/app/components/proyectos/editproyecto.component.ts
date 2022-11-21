@@ -3,6 +3,7 @@ import { Proyecto } from 'src/app/model/proyecto';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageProyectoService } from 'src/app/service/image-proyecto.service';
 import { ProyectoService } from 'src/app/service/proyecto.service';
+import { identifierName } from '@angular/compiler';
 
 @Component({
   selector: 'app-editproyecto',
@@ -31,26 +32,20 @@ export class EditProyectoComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    if(!(this.imagePService.url == "")){
-      this.proyecto.img = this.imagePService.url;
-    }
+    this.proyecto.img = this.imagePService.url
     this.proyectoService.update(id, this.proyecto).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{
-         alert("Error al modificar experiencia");
+         alert("Error al modificar");
          this.router.navigate(['']);
       }
     )
   }
 
   uploadImage($event:any){
-    if($event.target.files[0] == null){
-      this.imagePService.url = this.proyecto.img;
-    } else {
-      const name = "proyecto_" + this.proyecto.nombre;
+      const id = this.activatedRouter.snapshot.params['id'];
+      const name = "proyecto_" + id;
       this.imagePService.uploadImage($event, name);
     }
-  }
-
 }
