@@ -7,8 +7,12 @@
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">Descripcion del proyecto</label>
+                    <label for="descripcion"><b>Descripcion del proyecto</b></label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Ingrese la imagen</label>
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="descripcion" required>
                 </div>
                 <div class="imagen">
                     <img [src]="imagePService.url" width="200px"> 
