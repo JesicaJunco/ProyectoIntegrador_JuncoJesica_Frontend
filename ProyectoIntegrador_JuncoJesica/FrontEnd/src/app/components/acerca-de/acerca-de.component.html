@@ -1,6 +1,10 @@
+<div>
+    <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+        Editar persona
+    </button>
+</div>
 <div class="row" *ngIf="persona">
    
-
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <img src={{persona.img}}  class="img-fluid" id="fotodeperfil">
         
@@ -17,12 +21,6 @@
         <p><b>{{persona.descripcion}}</b></p>
         </span>
         
-      </div>
-      <br>
-      <div class="col-lg-2">
-          <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
-              Editar persona
-          </button>
-      </div>
+    </div>    
 </div>
 
