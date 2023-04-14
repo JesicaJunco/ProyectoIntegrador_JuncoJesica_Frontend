@@ -9,6 +9,6 @@ export const environment = {
     messagingSenderId: '519455523717',
   },
   production: true,
-  URL: 'https://backendjesicaj.herokuapp.com/'
+  URL: 'https://backendjesica.onrender.com'
 
 };

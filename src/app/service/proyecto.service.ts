@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
- URL = 'https://backendjesicaj.herokuapp.com/proyecto/';
+ URL = 'https://backendjesica.onrender.com/proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 
