@@ -32,6 +32,8 @@ div{
 }
 /*etiqueta nombre*/
 #nombre{
+    font-family: 'Poltawski Nowy', serif;
+    font-size: 2rem;
     font-weight: bold;
     margin-top: 30%;
     
