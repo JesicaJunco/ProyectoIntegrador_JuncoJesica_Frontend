@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'https://backendjesica.onrender.com/explab/'
+  expURL = 'https://backendjesica.onrender.com/explab/';
 
 
   constructor(private httpClient: HttpClient) { }
